@@ -2,51 +2,58 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Arial, sans-serif;
   }
   
   .grouping-select {
     margin-bottom: 20px;
   }
   
-  .orders-list {
+  .bids, .asks {
     list-style: none;
     padding: 0;
-    margin: 0;
-    width: 100%; 
-    max-width: 400px;
+    margin: 0 0 20px 0;
+    width: 100%;
+    max-width: 600px; /* Adjust based on your layout */
   }
   
-  .orders-list li {
+  .bids li, .asks li {
     display: flex;
     justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .bids {
+    order: 1; /* Bids at the top */
+  }
+  
+  .asks {
+    order: 3; /* Asks at the bottom */
+  }
+  
+  .latest-price {
+    order: 2; /* Latest price in the middle */
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .orderbook-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .orderbook-cell {
     padding: 5px 10px;
-    margin-bottom: 2px;
-    font-size: 14px; 
-    color: #333; 
   }
   
-  .orders-list li span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0; 
-  }
-  
-  .price, .amount {
-    flex: 1; 
-    text-align: right;
-  }
-  
-  .price {
-    text-align: left; 
-    margin-right: 10px; 
-  }
-  
-  .bids .orders-list li {
+  /* Background colors */
+  .bids li {
     background-color: #ccffcc;
   }
   
-  .asks .orders-list li {
+  .asks li {
     background-color: #ffcccc;
   }
   
