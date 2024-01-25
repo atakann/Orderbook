@@ -1,0 +1,52 @@
+.orderbook-heatmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .grouping-select {
+    margin-bottom: 20px;
+  }
+  
+  .orders-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    max-width: 400px;
+  }
+  
+  .orders-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    font-size: 14px; 
+    color: #333; 
+  }
+  
+  .orders-list li span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0; 
+  }
+  
+  .price, .amount {
+    flex: 1; 
+    text-align: right;
+  }
+  
+  .price {
+    text-align: left; 
+    margin-right: 10px; 
+  }
+  
+  .bids .orders-list li {
+    background-color: #ccffcc;
+  }
+  
+  .asks .orders-list li {
+    background-color: #ffcccc;
+  }
+  
